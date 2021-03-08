@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="urn:havis:custom:harting:etb:sensor:xsd:1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:havis:custom:harting:etb:sensor:xsd:1" elementFormDefault="qualified">
+	
+	<xs:complexType name="Configuration">
+		<xs:sequence>
+			<xs:element name="framerate" type="xs:string" />
+			<xs:element name="resolution" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

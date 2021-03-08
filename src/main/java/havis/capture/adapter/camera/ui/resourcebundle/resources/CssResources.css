@@ -1,0 +1,57 @@
+@CHARSET "ISO-8859-1";
+
+/*Styles for Camera config*/
+.config-area {
+	padding-left: 3em;
+}
+
+.commonLabel {
+	padding: 0.3em 0.25em 0.25em 0.45em;
+	width: 6em;
+}
+
+.configTextboxShort {
+	padding: 0.3em 0.25em 0.25em 0.45em;
+	box-sizing: border-box;
+	font-size:1em;
+	border: 1px solid #cccccc;
+	border-radius: 2.5em;
+	width: 30%; 
+}
+
+.webui-ListBoxShort{
+	padding: 0.3em 0.25em 0.25em 0.45em;
+	box-sizing: border-box;
+	font-size:1em;
+	border: 1px solid #cccccc;
+	border-radius: 2.5em;
+	width: 30%;
+}
+
+.webui-Input-Error{
+	-webkit-box-shadow: inset 0px 0px 5px 1px rgba(255,0,0,1);
+	-moz-box-shadow: inset 0px 0px 5px 1px rgba(255,0,0,1);
+	box-shadow: inset 0px 0px 5px 1px rgba(255,0,0,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/capture/adapter" module="camera" />
+
+	<configurations>
+		<conf name="default" />
+		<conf name="runtime" />
+		<conf name="standalone" />
+	</configurations>
+
+	<dependencies>
+		<dependency org="havis/capture" name="capture-api" rev="${havis.version}" conf="default->default,src" />
+		<dependency org="havis/net/rest" name="shared" rev="${havis.version}" conf="default->default,src" />
+		<dependency org="havis/net/ui" name="shared" rev="${havis.version}" conf="default->default,src" />
+		<dependency org="havis/net/server" name="http" rev="${havis.version}" conf="default" />
+
+		<dependency org="havis/tools" name="jaxb" rev="${jaxb-tool.version}" conf="default" />	
+		<dependency org="com/sun/xml/ws" name="jaxws-tools" rev="${jaxws.version}" conf="default" />
+		
+		<dependency org="com/fasterxml/jackson/core" name="jackson-databind" rev="${jackson.version}" conf="default" />
+	
+		<dependency org="javax/ws/rs" name="javax.ws.rs-api" rev="${javax.ws.rs-api.version}" conf="default" />
+		
+		<dependency org="org/osgi" name="org.osgi.core" rev="${osgi.version}" conf="default" />
+		
+		<dependency org="org/jmockit" name="jmockit" rev="${jmockit.version}" conf="default" />
+		<dependency org="org/jmockit" name="jmockit-coverage" rev="${jmockit.version}" conf="default" />
+		<dependency org="junit" name="junit" rev="${junit.version}" conf="default" />
+		
+		<!-- gwt -->
+		<dependency org="com/google/gwt" name="gwt-dev" rev="${gwt.version}" conf="default" />
+		<dependency org="com/google/gwt" name="gwt-user" rev="${gwt.version}" conf="default" />
+		<dependency org="com/google/gwt" name="gwt-elemental" rev="${gwt.version}" conf="default" />
+		<dependency org="org/fusesource/restygwt" name="restygwt" rev="${restygwt.version}" conf="default" />
+		
+		
+	</dependencies>
+
+</ivy-module>

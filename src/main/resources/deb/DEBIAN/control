@@ -1,0 +1,6 @@
+Package: @Bundle-SymbolicName@
+Version: @Bundle-Version@
+Architecture: all
+Depends: havis.capture-api
+Maintainer: @Bundle-Vendor@
+Description: @Bundle-Name@

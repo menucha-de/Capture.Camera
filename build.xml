@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project name="havis.capture.adapter.camera" default="publish" xmlns:if="ant:if">
+
+	<property file="${basedir}/build.properties" />
+
+	<import>
+		<url url="${ivy.url}/ant/default.xml" />
+	</import>
+
+	<property name="build.dir.xml" value="${build.dir}/xml" />
+	<property name="build.dir.xml.classes" value="${build.dir.xml}/classes" />
+	<property name="build.dir.xml.src" value="${build.dir.xml}/src" />
+
+	<target name="clean-cache" description="Cleans the ivy cache">
+		<clean-cache />
+	</target>
+
+	<target name="clean-all" description="Cleans the project and ivy cache">
+		<clean-all />
+	</target>
+
+	<target name="compile">
+		<xjc name="camera" />
+		<compile dst="${build.dir.xml.classes}">
+			<src path="${build.dir.xml.src}" />
+		</compile>
+		<compile dst="${build.dir.classes}">
+			<src path="${src.main.dir}" />
+			<classpath>
+				<pathelement location="${build.dir.xml.classes}" />
+			</classpath>
+		</compile>
+	</target>
+
+	<target name="native" depends="compile">
+		<mkdir dir="${build.dir}/include" />
+		<javah destdir="${build.dir}/include" verbose="true" class="havis.capture.adapter.camera.v4l.V4l">
+			<classpath>
+				<pathelement location="${src.main.dir}" />
+			</classpath>
+		</javah>
+		<make />
+	</target>
+
+	<target name="jar" depends="compile, native" description="Builds a JAR file from the project.">
+		<jar-bin>
+			<manifest>
+				<attribute name="Bundle-NativeCode" value="libv4l.so;osname=linux;processor=${processor}" />
+			</manifest>
+		</jar-bin>
+	</target>
+
+	<target name="test" depends="compile" unless="${skip.test}">
+		<test />
+	</target>
+
+	<target name="publish" depends="jar" description="Publishes the JAR to the repository">
+		<publish app="false" jar="false" />
+	</target>
+
+</project>

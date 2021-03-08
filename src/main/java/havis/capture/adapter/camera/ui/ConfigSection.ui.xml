@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:table="urn:import:havis.net.ui.shared.client.table">
+	<ui:with type="havis.net.ui.shared.resourcebundle.ResourceBundle"
+		field="res"></ui:with>
+	<ui:with
+		type="havis.capture.adapter.camera.ui.resourcebundle.ResourceBundle"
+		field="localRes"></ui:with>
+	<ui:with
+		type="havis.capture.adapter.camera.ui.resourcebundle.ConstantsResource"
+		field="i18n"></ui:with>
+	<ui:style>
+	
+	</ui:style>
+
+	<g:FlowPanel>
+		<g:FlowPanel addStyleNames="{res.css.row} {res.css.config}">
+			<g:Label ui:text="{i18n.configFramerate}" addStyleNames="{localRes.css.commonLabel}" />
+			<g:TextBox ui:field="framerate" addStyleNames="{localRes.css.configTextboxShort}" />
+			<g:Label ui:text="fps" />
+		</g:FlowPanel>
+		<g:FlowPanel addStyleNames="{res.css.row} {res.css.config}">
+			<g:Label ui:text="{i18n.configResolution}" addStyleNames="{localRes.css.commonLabel}" />
+			<g:ListBox ui:field="resolution" addStyleNames="{localRes.css.webuiListBoxShort}">
+				<g:item value="160x120">160x120</g:item>
+				<g:item value="320x240">320x240</g:item>
+				<g:item value="640x480">640x480</g:item>
+				<g:item value="800x600">800x600</g:item>
+				<g:item value="1280x960">1280x960</g:item>
+			</g:ListBox>
+			<g:Label ui:text="pixel" />
+		</g:FlowPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 

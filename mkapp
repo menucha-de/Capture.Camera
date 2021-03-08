@@ -1,0 +1,13 @@
+#!/bin/bash
+
+et +x
+set +e
+
+. /usr/share/mkapp/functions
+
+build -F
+
+if [ "$PUBLISH" ]; then
+  publish_ivy ivy
+  publish_debs
+fi

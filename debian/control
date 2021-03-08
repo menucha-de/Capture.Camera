@@ -1,0 +1,8 @@
+Source: havis.capture.adapter.camera
+Maintainer: HARTING IT_SD <opensource@HARTING.com>
+Build-Depends: debhelper, dh-exec, nodejs:amd64, default-jdk-headless:amd64, ant:all, ivy:all, libjsch-java:all, libv4l-dev, pkg-config
+ 
+Package: havis.capture.adapter.camera
+Architecture: any
+Depends: ${shlibs:Depends}, libv4l-0
+Description: Ha-VIS Capture Adapter Camera
