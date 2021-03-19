@@ -1,5 +1,5 @@
 Source: havis.capture.adapter.camera
-Maintainer: HARTING IT_SD <opensource@HARTING.com>
+Maintainer: Menucha Team <info@menucha.de>
 Build-Depends: debhelper, dh-exec, nodejs:amd64, default-jdk-headless:amd64, ant:all, ivy:all, libjsch-java:all, libv4l-dev, pkg-config
  
 Package: havis.capture.adapter.camera

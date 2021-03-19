@@ -3,7 +3,7 @@ Bundle-SymbolicName: havis.capture.adapter.camera
 Bundle-Version: 2.7.0
 Implementation-Version: 2.7
 Bundle-ManifestVersion: 2
-Bundle-Vendor: HARTING IT_SD
+Bundle-Vendor: Menucha Team <info@menucha.de>
 Havis-Bundle: 
  /OSGI-INF/havis.capture.adapter.camera.properties
 Bundle-Activator: havis.capture.osgi.Activator

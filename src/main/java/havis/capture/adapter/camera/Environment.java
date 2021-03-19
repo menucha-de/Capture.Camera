@@ -20,7 +20,7 @@ public class Environment {
 		}
 	}
 
-	public static final String V4L = properties.getProperty("havis.custom.harting.camera.v4l", "v4l");
+	public static final String V4L = properties.getProperty("havis.capture.adapter.camera.v4l", "v4l");
 	public static final String CONFIG_FILE = properties.getProperty("havis.capture.adapter.camera.configFile", "conf/havis/capture/adapter/camera/config.json");
 
 }
